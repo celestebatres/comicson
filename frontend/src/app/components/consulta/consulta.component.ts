@@ -47,4 +47,11 @@ export class ConsultaComponent implements OnInit {
      this.dataService.label2P = "/signup";
   }
 
+  eliminarComic(comic: ComicItem){
+    this.backend.eliminaComic(comic.id_comic).subscribe(x=>{
+      alert(x.mensaje);
+    });
+    this.ngOnInit();
+  }
+
 }

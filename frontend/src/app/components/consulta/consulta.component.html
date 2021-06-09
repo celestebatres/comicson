@@ -8,6 +8,8 @@
           <td>{{comic.anio_impresion}}</td>
           <td>{{comic.sinopsis}}</td>
           <td>{{comic.editorial}}</td>
+          <td><button>EDITAR</button></td>
+          <td><button  (click) = "eliminarComic(comic)">ELIMINAR</button></td>
       </tr>
     </table>
     <button (click) = "logOut()">LOG OUT</button>

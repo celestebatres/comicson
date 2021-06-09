@@ -25,7 +25,9 @@ export class SignupComponent implements OnInit {
   }
 
   guardar(){
-    
+    this.backend.insertaUsuario(this.formU.controls["nombre"].value,this.formU.controls["username"].value, this.formU.controls["pass"].value,this.formU.controls["fecha_nac"].value,this.formU.controls["sexo"].value).subscribe(x => {
+      alert(x.mensaje);
+    });
   }
 
 }

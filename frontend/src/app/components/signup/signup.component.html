@@ -1,17 +1,19 @@
 <div class="formulario">
     <h3>SIGN UP</h3>
-    <form action="">
+    <form [formGroup] = "formU" action="">
         <div class="campos">
-            <input type="text" name="" id="inp" placeholder="Nombre">
-            <input type="text" name="" id="inp" placeholder="Usuario">
-            <input type="password" name="" id="inp" placeholder="Password">
-            <input type="text" name="" id="inp" placeholder="DOB (YYYY-MM-DD)">
-            <div class="radioB">
+            <input type="text" formControlName="nombre"  name="" id="inp" placeholder="Nombre" required>
+            <input type="text" formControlName="username" name="" id="inp" placeholder="Usuario" required>
+            <input type="password" formControlName="pass" name="" id="inp" placeholder="Password" required>
+            <input type="text" formControlName="fecha_nac" name="" id="inp" pattern="^\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$" title="Formato: YYYY-MM-DD" placeholder="DOB (YYYY-MM-DD)" required>
+            <div class="radioB" required>
                 <p>Sexo:</p>
-                <p><input type="radio" id="male" name="gender" value="M">M</p>
-                <p><input type="radio" id="female" name="gender" value="F">F</p>
+                <select formControlName="sexo" id="inp" name="menu">
+                    <option value="F">Femenino</option>
+                    <option value="M">Masculino</option>
+                  </select>
             </div>
-            <button id="inp">GUARDAR USUARIO</button>
+            <button id="inp" (click)="guardar()">GUARDAR USUARIO</button>
         </div>
     </form>
 </div>
