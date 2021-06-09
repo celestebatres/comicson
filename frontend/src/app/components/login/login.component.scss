@@ -1,0 +1,27 @@
+.formulario{
+
+    background-color: #f5f3d7;
+    width: 200px;
+    height: 200px;
+    padding: 5% 10% 5% 10%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3%;
+}
+
+.campos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+#inp{
+    height: 30px;
+    margin: 5px 5px 5px 5px;
+}
