@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { BackendService } from '../../services/backend.service';
 
 @Component({
   selector: 'app-signup',
@@ -6,10 +9,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit {
+  formU : FormGroup;
 
-  constructor() { }
+  constructor(private router: Router, private formBuilder: FormBuilder, private backend: BackendService) {
+    this.formU = this.formBuilder.group({
+      nombre: [''],
+      username: [''],
+      pass: [''],
+      fecha_nac: [''],
+      sexo: ['']
+    });
+   }
 
   ngOnInit(): void {
+  }
+
+  guardar(){
+    
   }
 
 }
