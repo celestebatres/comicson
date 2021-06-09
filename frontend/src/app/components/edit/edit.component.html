@@ -1,0 +1,17 @@
+<div class="formulario">
+    <h3>EDITAR COMIC</h3>
+    <form [formGroup] = "formG">
+        <div class="campos">
+            <input type="text" formControlName="nombre" name="" id="inp" placeholder="Nombre">
+            <input type="number" formControlName="anio_impresion" name="" id="inp" placeholder="Año de Impresión">
+            <input type="text" formControlName="sinopsis" name="" id="inp" placeholder="Sinopsis">
+            <select formControlName="editorial" id="inp" name="menu">
+                <option value="Marvel">Marvel</option>
+                <option value="DC Comics">DC Comics</option>
+                <option value="Image">Image</option>
+              </select>
+              <button id="inp" (click)="editar()">GUARDAR COMIC</button>
+              <button id="inp" (click)="regresar()">REGRESAR</button>
+        </div>
+    </form>
+</div>

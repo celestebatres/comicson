@@ -12,6 +12,7 @@ import { SessionComponent } from './components/session/session.component';
 import { IngresoComponent } from './components/ingreso/ingreso.component';
 import { ConsultaComponent } from './components/consulta/consulta.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EditComponent } from './components/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     SignupComponent,
     SessionComponent,
     IngresoComponent,
-    ConsultaComponent
+    ConsultaComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

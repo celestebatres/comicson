@@ -6,9 +6,10 @@ import { SaveComic } from '../models/comics/SaveComic';
 import { SaveComicResponse } from '../models/comics/SaveComicResponse';
 import { SaveUsuario } from '../models/usuarios/SaveUsuario';
 import { SaveUsuarioResponse } from '../models/usuarios/SaveUsuarioResponse';
-import { DeleteComic } from '../models/comics/DeleteComic';
 import { DeleteComicResponse } from '../models/comics/DeleteComicResponse';
 import { ComicItem } from '../models/comics/ComicItem';
+import { PutComicResponse } from '../models/comics/PutComicResponse';
+import { PutComic } from '../models/comics/PutComic';
 
 
 const BE_API = environment.urlBackend;
@@ -32,6 +33,12 @@ export class BackendService {
     let url:string = BE_API + '/comic';
     let comic : SaveComic = new SaveComic(0, nombre,anio_impresion, sinopsis, editorial);
     return this.http.post<SaveComicResponse>(url, comic, httpOptions);
+  }
+
+  editaComic(id_comic: number, nombre: string, anio_impresion:number, sinopsis:string, editorial:string){
+    let url: string = BE_API + '/comic/' + id_comic;
+    let usuario: PutComic = new PutComic(nombre,anio_impresion, sinopsis, editorial);
+    return this.http.put<SaveUsuarioResponse>(url, usuario, httpOptions);
   }
 
   eliminaComic(id_comic: number){

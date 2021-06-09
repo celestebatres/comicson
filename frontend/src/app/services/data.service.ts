@@ -10,5 +10,6 @@ export class DataService {
   label1P : string = "";
   label2P: string = "";
   
+  id_comic: number = 0;
   constructor(){}
 }

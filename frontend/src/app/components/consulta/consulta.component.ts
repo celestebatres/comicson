@@ -47,6 +47,11 @@ export class ConsultaComponent implements OnInit {
      this.dataService.label2P = "/signup";
   }
 
+  editarComic(comic: ComicItem){
+    this.dataService.id_comic = comic.id_comic;
+    this.router.navigateByUrl('/edit');
+  }
+
   eliminarComic(comic: ComicItem){
     this.backend.eliminaComic(comic.id_comic).subscribe(x=>{
       alert(x.mensaje);
