@@ -17,7 +17,8 @@ const routes: Routes = [
   {path:'consulta', component:ConsultaComponent},
   {path:'inicio',component:InicioComponent},
   {path: 'menu', component:MenuComponent},
-  {path: 'edit', component:EditComponent}
+  {path: 'edit', component:EditComponent},
+  {path: '**', pathMatch: 'full', redirectTo: 'inicio'}
 ];
 
 @NgModule({
